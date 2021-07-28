@@ -10,7 +10,7 @@ namespace CronJob
         public DbSet<JobRunDetails> JobRunDetails { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+             optionsBuilder.UseSqlServer(@"Data Source=18.140.56.99,1433;Initial Catalog=CCDP;User id=sa;Password=Pass@w0rd1;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             
         }
     }
